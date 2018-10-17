@@ -1,0 +1,61 @@
+@import "./../../../styles";
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, $main-dark-color, $main-red-color);
+  .form-holder {
+    width: 400px;
+    height: 250px;
+    border: 2px solid $main-dark-color;
+    background-color: $main-light-color;
+    border-radius: 20px;
+    padding-top: 40px;
+    form {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: space-around;
+      .form-group {
+        position: relative;
+        input {
+          width: 300px;
+          padding: 10px 20px;
+          outline: none;
+        }
+        button {
+          width: 340px;
+          padding: 10px 20px;
+        }
+        .error-msg {
+          display: block;
+          position: absolute;
+          width: 320px;
+          margin: 5px;
+          font-family: sans-serif;
+          font-size: 13px;
+          text-align: center;
+          color: $main-red-color;
+        }
+        p {
+          text-align: center;
+          color: $main-leather-color;
+          span {
+            color: $main-dark-color;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .ng-invalid.ng-touched {
+          border: 2px solid $main-red-color;
+        }
+        .ng-valid.ng-touched {
+          border: 2px solid $main-success-color;
+        }
+      }
+    }
+  }
+}

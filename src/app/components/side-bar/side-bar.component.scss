@@ -1,0 +1,95 @@
+@import "./../../../styles";
+
+.side-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  .logo {
+    flex: 1;
+    width: 100%;
+    max-height: 70px;
+    background-color: $main-red-color;
+    p {
+      padding: 10px 30px;
+      margin: 15px 20px;
+      font-weight: bold;
+      color: $main-light-color;
+      text-align: center;
+      border: 2px dotted $main-light-color;
+    }
+  }
+  .menu-links {
+    flex: 4;
+    ul {
+      list-style-type: none;
+      text-transform: capitalize;
+      color: $main-leather-color;
+      margin: 80px 0 0 0;
+      padding: 0;
+      li {
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+        cursor: pointer;
+        position: relative;
+        box-sizing: border-box;
+        outline: none;
+        border: 2px solid transparent;
+        i {
+          display: none;
+        }
+        &:hover {
+          color: $main-dark-color;
+          background: $main-light-color;
+          padding-left: 30px;
+          transition-duration: 0.35s;
+          border-bottom: 2px solid $main-red-color;
+          i {
+            display: inline-block;
+            position: relative;
+            top: 4px;
+            margin: 0 5px;
+            color: $main-red-color;
+          }
+        }
+      }
+      .active {
+        color: $main-dark-color;
+        background-color: $main-light-color;
+        padding-left: 30px;
+        transition-duration: 0.35s;
+        border-bottom: 2px solid $main-red-color;
+        margin-bottom: -2px;
+        i {
+          display: inline-block;
+          position: relative;
+          top: 4px;
+          margin: 0 5px;
+          color: $main-red-color;
+        }
+      }
+    }
+  }
+  .user-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 70px;
+    background-color: $main-red-color;
+    .user-logo {
+      width: 50px;
+      height: 50px;
+      background-color: $main-leather-color;
+      border-radius: 50%;
+      margin: 0 20px;
+    }
+    .user-name {
+      font-weight: bold;
+      font-family: sans-serif;
+    }
+  }
+}

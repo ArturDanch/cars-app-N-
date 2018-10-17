@@ -1,0 +1,72 @@
+@import "./../../../styles";
+
+.car-container {
+  width: 140px;
+  height: 240px;
+  border: 1px solid $main-leather-color;
+  box-shadow: 2px 3px 13px $main-leather-color;
+  margin: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition-duration: 0.1s;
+  padding: 0 20px;
+  .car-title {
+    padding: 20px 0 0 0;
+  }
+  .color {
+    margin: 10px auto;
+    height: 35px;
+    border: 1px solid $main-leather-color;
+  }
+  ul, li {
+    text-align: left;
+    padding: 0;
+    list-style-type: none;
+    li {
+      padding: 2px 0;
+    }
+    span {
+      display: inline-block;
+      float: right;
+    }
+    .price {
+      color: $main-success-color;
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 5px $main-leather-color;
+    top: 2px;
+    left: 3px;
+    background-color: #ffffff;
+    .color {
+      border: 0;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      border-bottom: 1px solid $main-leather-color;
+      border-top: 1px solid $main-leather-color;
+    }
+  }
+  .menu {
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 3px;
+      margin: 2px 4px;
+      &:hover {
+        border-radius: 5px;
+        background-color: $main-light-color;
+      }
+    }
+    .add {
+      color: $main-success-color;
+    }
+    .edit {
+      color: $main-leather-color;
+    }
+    .delete {
+      color: $main-red-color;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<div class="car-container">
+  <section>
+    <div class="car-title">
+      <span>{{myCar.title}}</span>
+    </div>
+    <div class="car-model">
+      <span>{{myCar.model | shorten:10}}</span>
+    </div>
+  </section>
+  <section>
+    <div class="color" [ngStyle]="{backgroundColor: myCar.color}">
+    </div>
+  </section>
+  <section>
+    <ul>
+      <li>Country: <span>{{myCar.country}}</span></li>
+      <li>Year <span>{{myCar.year}}</span></li>
+      <li>Price: <span class="price">{{myCar.price | price}}</span></li>
+    </ul>
+  </section>
+  <section>
+    <div class="menu">
+      <button class="edit">edit</button>
+      <button class="delete" (click)="onCarDelete()">delete</button>
+    </div>
+  </section>
+</div>

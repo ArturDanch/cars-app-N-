@@ -1,0 +1,37 @@
+@import "./../../../styles";
+.create-holder {
+  text-align: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 10px auto;
+    .text-input {
+      padding: 10px 12px;
+      margin: 2px 0;
+      outline: none;
+    }
+    .input-holder {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .year {
+        width: 45%;
+      }
+      .color {
+        width: 45%;
+        padding: 7px 4px;
+      }
+    }
+    .submit {
+      padding: 10px 0;
+    }
+      .ng-invalid.ng-touched {
+      border: 2px solid $main-red-color;
+      }
+    .ng-valid.ng-touched {
+      border: 2px solid $main-success-color;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="login-container">
+  <div class="form-holder">
+    <form (ngSubmit)="onLogin(f)" #f="ngForm">
+      <div class="form-group">
+        <input
+          #email="ngModel"
+          type="text"
+          placeholder="email"
+          ngModel
+          name="email"
+          required
+          email
+          autocomplete="new-email">
+        <span class="error-msg" *ngIf="email.invalid && email.touched">Please, enter a valid email</span>
+      </div>
+      <div class="form-group">
+        <input
+          #password="ngModel"
+          type="password"
+          placeholder="password"
+          ngModel
+          name="password"
+          autocomplete="new-password"
+          required
+          minlength="7">
+        <span class="error-msg" *ngIf="password.invalid && password.touched">Password should contain at least 7 characters</span>
+      </div>
+      <div class="form-group">
+        <button type="submit" [disabled]="f.invalid">Login</button>
+        <p>Have no account yet? <span routerLink="/create-account">Create one</span></p>
+      </div>
+    </form>
+  </div>
+</div>

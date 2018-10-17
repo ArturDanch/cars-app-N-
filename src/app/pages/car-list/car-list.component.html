@@ -1,0 +1,38 @@
+<div class="main-holder">
+  <app-menu
+    (sortValue)="filterCars($event)"
+    (viewValue)="changeView()"></app-menu>
+  <div class="table-holder" *ngIf="tableView && carsArray">
+    <table>
+      <tr>
+        <th>N</th>
+        <th (click)="sortCars('title')">Title</th>
+        <th (click)="sortCars('model')">Model</th>
+        <th (click)="sortCars('country')">Country</th>
+        <th (click)="sortCars('year')">Year</th>
+        <th (click)="sortCars('price')">Price</th>
+        <th (click)="sortCars('color')">Color</th>
+      </tr>
+      <tr *ngFor="let car of carsArray; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ car.title | uppercase}}</td>
+        <td>{{ car.model | shorten:10}}</td>
+        <td>{{ car.country }}</td>
+        <td [ngClass]="{'is-new': car.year > 2012}">{{ car.year }}</td>
+        <td title="{{ car.price }} $">{{ car.price | price}}</td>
+        <td><div class="car-color" [ngStyle]="{backgroundColor: car.color}"></div></td>
+      </tr>
+      <tr class="empty-tr" *ngIf="!carsArray">
+        <td colspan="7"><app-loader></app-loader></td>
+      </tr>
+    </table>
+  </div>
+  <div class="cars-holder" *ngIf="!tableView && carsArray">
+    <app-car-card
+      *ngFor="let car of carsArray; let i = index"
+      [myCar]="car"
+      [carIndex]="i"
+      (deleteCar)="onCarRemove($event)"></app-car-card>
+  </div>
+  <app-loader *ngIf="!carsArray"></app-loader>
+</div>

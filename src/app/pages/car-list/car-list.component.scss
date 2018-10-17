@@ -1,0 +1,48 @@
+@import './../../../styles';
+.main-holder {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-family: sans-serif;
+  color: $main-dark-color;
+  background-color: $main-light-color;
+  .table-holder {
+    margin-top: 30px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+      th, td {
+        padding: 10px;
+      }
+      th {
+        border-bottom: 1px solid $main-leather-color;
+      }
+      .car-color {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #000000;
+        outline: 1px solid #ffffff;
+        margin: 0 auto;
+      }
+    }
+    .empty-tr {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      color: $main-leather-color;
+    }
+    .is-new {
+      color: $main-success-color;
+    }
+  }
+  .cars-holder {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,39 @@
+@import "./../../../styles";
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 150px 0;
+  .spinner-main {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 10px solid $main-leather-color;
+    border-left-color: $main-red-color;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+  }
+  .spinner-second {
+    position: relative;
+    bottom: 20px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    border: 10px solid $main-leather-color;
+    border-top-color: $main-dark-color;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}

@@ -1,0 +1,16 @@
+<div class="create-holder">
+  <h1>Create new Car</h1>
+
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input type="text" placeholder="Title" class="text-input" ngModel name="title" minlength="2" required>
+    <input type="text" placeholder="Model" class="text-input" ngModel name="model" required>
+    <input type="text" placeholder="Country" class="text-input" ngModel name="country" required>
+    <input type="number" placeholder="price" class="text-input" ngModel name="price" required>
+    <div class="input-holder">
+      <input type="number" placeholder="Year" class="year text-input" ngModel name="year" required>
+      <input type="color" class="color text-input" ngModel name="color" required>
+    </div>
+    <input type="submit" value="Create" class="submit" [disabled]="!f.valid">
+  </form>
+
+</div>
